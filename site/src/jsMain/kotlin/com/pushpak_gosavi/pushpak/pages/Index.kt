@@ -1,6 +1,7 @@
 package com.pushpak_gosavi.pushpak.pages
 
 import androidx.compose.runtime.*
+import com.pushpak_gosavi.pushpak.pages.sections.mainSection
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -16,5 +17,7 @@ fun HomePage() {
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
-    ) {  }
+    ) {
+        mainSection()
+    }
 }
