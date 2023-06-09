@@ -11,7 +11,7 @@ import com.varabyte.kobweb.core.Page
 
 @Page
 @Composable
-fun HomePage() {
+fun homePage() {
     // TODO: Add content here
     Column (
         modifier = Modifier.fillMaxSize(),

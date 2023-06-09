@@ -9,5 +9,6 @@ object Constants {
 object Res{
     object Image{
         const val background = "background.svg"
+        const val logo="logo.svg"
     }
 }

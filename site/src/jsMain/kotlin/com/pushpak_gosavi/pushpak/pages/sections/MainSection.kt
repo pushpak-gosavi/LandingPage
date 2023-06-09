@@ -1,6 +1,7 @@
 package com.pushpak_gosavi.pushpak.pages.sections
 
 import androidx.compose.runtime.Composable
+import com.pushpak_gosavi.pushpak.components.header
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
 import com.pushpak_gosavi.pushpak.utils.Res
 import com.varabyte.kobweb.compose.css.ObjectFit
@@ -21,6 +22,7 @@ fun mainSection(){
         contentAlignment = Alignment.TopCenter
     ) {
         mainBackground()
+        header()
     }
 }
 
