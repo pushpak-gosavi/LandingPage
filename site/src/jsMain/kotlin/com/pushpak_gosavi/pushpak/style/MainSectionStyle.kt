@@ -2,7 +2,6 @@ package com.pushpak_gosavi.pushpak.style
 
 import com.pushpak_gosavi.pushpak.models.Theme
 import com.varabyte.kobweb.compose.css.CSSTransition
-import com.varabyte.kobweb.compose.css.functions.hueRotate
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.transform
@@ -45,5 +44,18 @@ val LogoStyle by ComponentStyle {
                 rotate((-10).deg)
             }
             .transition(CSSTransition(property = "transform", duration = 200.ms))
+    }
+}
+
+val SocialLinksStyle by ComponentStyle {
+    base {
+        Modifier
+            .color(Theme.Gray.rgb)
+            .transition(CSSTransition(property = "color", duration = 200.ms))
+    }
+    hover{
+        Modifier
+            .color(Theme.Primary.rgb)
+            .transition(CSSTransition(property = "Color", duration = 200.ms))
     }
 }

@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.pushpak_gosavi.pushpak.components
 
 import androidx.compose.runtime.Composable
@@ -16,35 +18,50 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.icons.fa.FaBars
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
 fun header() {
+    val breakpoint by rememberBreakpoint()
     Row (
         modifier = Modifier.
-        fillMaxWidth(80.percent).
+        fillMaxWidth(if(breakpoint<=Breakpoint.MD)80.percent else 90.percent).
         id(Section.Home.id).
-        borderRadius(50.px).
-        margin(20.px).
-        backgroundColor(Theme.LighterGray.rgb),
+        margin(topBottom = 50.px),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ){
-        leftSide()
-        rightSide()
+        leftSide(breakpoint)
+        if(breakpoint > Breakpoint.MD) {
+            rightSide()
+        }
     }
 }
 
 @Composable
-fun leftSide(){
-    Image(
-        modifier = LogoStyle.toModifier(),
-        src = logo,
-        desc = "Logo"
-    )
+fun leftSide(breakpoint: Breakpoint) {
+    Row (
+        verticalAlignment = Alignment.CenterVertically
+    ){
+        if (breakpoint <= Breakpoint.MD) {
+            FaBars(
+                modifier = Modifier.margin(right = 15.px),
+                size = IconSize.XL
+            )
+        }
+        Image(
+            modifier = LogoStyle.toModifier(),
+            src = logo,
+            desc = "Logo"
+        )
+    }
 }
 
 @Composable
@@ -52,7 +69,9 @@ fun rightSide(){
     Row (
         modifier = Modifier
             .fillMaxWidth(80.percent)
-            .padding(20.px),
+            .padding(20.px)
+            .borderRadius(50.px)
+            .backgroundColor(Theme.LighterGray.rgb),
         horizontalArrangement = Arrangement.End
     ){
         Section.values().take(6).forEach { section ->

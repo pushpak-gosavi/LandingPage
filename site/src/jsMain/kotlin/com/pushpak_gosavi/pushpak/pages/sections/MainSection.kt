@@ -2,18 +2,18 @@ package com.pushpak_gosavi.pushpak.pages.sections
 
 import androidx.compose.runtime.Composable
 import com.pushpak_gosavi.pushpak.components.header
+import com.pushpak_gosavi.pushpak.components.socialBar
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
 import com.pushpak_gosavi.pushpak.utils.Res
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.foundation.layout.Box
+import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.maxSize
 import com.varabyte.kobweb.compose.ui.modifiers.objectFit
-import com.varabyte.kobweb.compose.ui.modifiers.size
 import com.varabyte.kobweb.silk.components.graphics.Image
-import org.jetbrains.compose.web.css.px
 
 @Composable
 fun mainSection(){
@@ -22,7 +22,7 @@ fun mainSection(){
         contentAlignment = Alignment.TopCenter
     ) {
         mainBackground()
-        header()
+        mainContent()
     }
 }
 
@@ -33,4 +33,16 @@ fun mainBackground(){
         src = Res.Image.background,
         desc = "Background Image")
 
+}
+
+@Composable
+fun mainContent(){
+    Column(
+        modifier = Modifier
+            .fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        header()
+        socialBar()
+    }
 }
