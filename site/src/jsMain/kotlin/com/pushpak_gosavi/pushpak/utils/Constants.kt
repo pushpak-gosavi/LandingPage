@@ -4,6 +4,7 @@ import org.jetbrains.compose.web.css.px
 
 object Constants {
     val SECTION_WIDTH = 1920.px
+    val FONT_FAMILY= "Roboto"
 }
 
 object Res{
