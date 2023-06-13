@@ -5,14 +5,13 @@ import com.pushpak_gosavi.pushpak.components.header
 import com.pushpak_gosavi.pushpak.components.socialBar
 import com.pushpak_gosavi.pushpak.models.Section
 import com.pushpak_gosavi.pushpak.models.Theme
+import com.pushpak_gosavi.pushpak.style.MainButtonStyle
+import com.pushpak_gosavi.pushpak.style.MainImageStyle
 import com.pushpak_gosavi.pushpak.utils.Constants.FONT_FAMILY
 import com.pushpak_gosavi.pushpak.utils.Constants.LOREM_IPSUM
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
 import com.pushpak_gosavi.pushpak.utils.Res
-import com.varabyte.kobweb.compose.css.FontStyle
-import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.ObjectFit
-import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -26,6 +25,7 @@ import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.percent
@@ -145,12 +145,13 @@ fun mainText(breakpoint: Breakpoint){
             }
 
             Button (
-                attrs = Modifier
+                attrs = MainButtonStyle.toModifier()
                     .height(40.px)
                     .borderRadius(r = 5.px)
                     .backgroundColor(Theme.Primary.rgb)
                     .color(Color.white)
                     .border(width = 0.px)
+                    .cursor(cursor = Cursor.Pointer)
                     .toAttrs()
             ) {
                 Link(
@@ -174,8 +175,8 @@ fun mainImage(){
         verticalArrangement = Arrangement.Bottom
     ) {
         Image(
-            modifier = Modifier.fillMaxWidth(),
-            src = Res.Image.main_image,
+            modifier = MainImageStyle.toModifier().fillMaxWidth(),
+            src = Res.Image.pushpak_image,
             desc = "Main Image"
         )
     }
