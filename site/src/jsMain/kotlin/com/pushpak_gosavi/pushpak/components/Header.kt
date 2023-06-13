@@ -1,4 +1,4 @@
-@file:Suppress("DEPRECATION")
+
 
 package com.pushpak_gosavi.pushpak.components
 
@@ -29,7 +29,7 @@ import org.jetbrains.compose.web.css.px
 
 @Composable
 fun header() {
-    val breakpoint by rememberBreakpoint()
+    val breakpoint = rememberBreakpoint()
     Row (
         modifier = Modifier.
         fillMaxWidth(if(breakpoint<=Breakpoint.MD)80.percent else 90.percent).
