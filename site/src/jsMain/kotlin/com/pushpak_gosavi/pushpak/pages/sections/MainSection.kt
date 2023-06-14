@@ -38,13 +38,12 @@ import kotlin.math.atan
 
 @Composable
 fun mainSection(){
-    val breakpoint = rememberBreakpoint()
     Box (
         modifier = Modifier.fillMaxSize().maxSize(SECTION_WIDTH),
         contentAlignment = Alignment.TopCenter
     ) {
         mainBackground()
-        mainContent(breakpoint)
+        mainContent()
     }
 }
 
@@ -58,7 +57,8 @@ fun mainBackground(){
 }
 
 @Composable
-fun mainContent(breakpoint: Breakpoint){
+fun mainContent(){
+    val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier
             .fillMaxSize(),
