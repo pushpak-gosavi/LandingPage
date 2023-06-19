@@ -29,7 +29,7 @@ fun aboutSection(){
 //        )
         sectionTitle(
             Section.About,
-            alignment = Alignment.End
+            alignment = Alignment.Start
         )
 
     }
