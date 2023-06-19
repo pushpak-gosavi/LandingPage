@@ -1,6 +1,7 @@
 package com.pushpak_gosavi.pushpak.pages.sections
 
 import androidx.compose.runtime.Composable
+import com.pushpak_gosavi.pushpak.components.sectionTitle
 import com.pushpak_gosavi.pushpak.components.skillBar
 import com.pushpak_gosavi.pushpak.models.Section
 import com.pushpak_gosavi.pushpak.utils.Constants
@@ -23,8 +24,13 @@ fun aboutSection(){
             .padding(topBottom = 150.px),
         contentAlignment = Alignment.Center,
     ){
-        skillBar(
-            name = "Creative"
+//        skillBar(
+//            name = "Creative"
+//        )
+        sectionTitle(
+            Section.About,
+            alignment = Alignment.End
         )
+
     }
 }
