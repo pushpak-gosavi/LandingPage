@@ -3,6 +3,7 @@ package com.pushpak_gosavi.pushpak.components
 import androidx.compose.runtime.Composable
 import com.pushpak_gosavi.pushpak.models.Theme
 import com.pushpak_gosavi.pushpak.utils.Constants.FONT_FAMILY
+import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -17,9 +18,11 @@ import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun skillBar(
-    name:String,
+    title:String,
+    index:Int,
     progressBarHeight : CSSSizeValue<CSSUnit.px> = 5.px,
-    percentage: CSSSizeValue<CSSUnit.percent> = 50.percent
+    percentage: CSSSizeValue<CSSUnit.percent> = 50.percent,
+    animatedPercentage : Int
 ){
     Column (
         modifier = Modifier
@@ -43,7 +46,7 @@ fun skillBar(
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ){
-                Text(name)
+                Text(title)
             }
             P (
                 attrs = Modifier
@@ -54,7 +57,7 @@ fun skillBar(
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ){
-                Text("${percentage.value}${percentage.unit}")
+                Text("$animatedPercentage%")
             }
         }
         Box (modifier = Modifier
@@ -64,7 +67,14 @@ fun skillBar(
             Box (modifier = Modifier
                 .fillMaxWidth(percentage)
                 .backgroundColor(Theme.Primary.rgb)
-                .height(progressBarHeight))
+                .height(progressBarHeight)
+                .transition(
+                    CSSTransition(
+                        property = "width",
+                        duration = 1000.ms,
+                        delay = 100.ms * index
+                    )
+                ))
         }
     }
 }
