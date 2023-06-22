@@ -43,14 +43,14 @@ fun aboutSection() {
             .fillMaxSize()
             .id(Section.About.id)
             .maxSize(SECTION_WIDTH)
-            .padding(topBottom = 150.px),
+            .padding(topBottom = 100.px),
         contentAlignment = Alignment.Center,
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth(
-                    if (breakpoint >= Breakpoint.MD) 100.percent
-                    else 90.percent
+                    if (breakpoint >= Breakpoint.MD) 90.percent
+                    else 100.percent
                 )
                 .maxWidth(1200.px),
             horizontalAlignment = Alignment.CenterHorizontally
