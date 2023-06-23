@@ -4,38 +4,41 @@ import com.pushpak_gosavi.pushpak.utils.Constants.LOREM_IPSUM_SHORT
 import com.pushpak_gosavi.pushpak.utils.Res
 
 enum class Service(
-    image: String, imageDescription: String, title: String, description: String
+   var icon: String,
+   var iconDesription: String,
+   var title: String,
+   var description: String
 ) {
     Android(
-        image = Res.Icon.android,
-        imageDescription = "Android Icon",
+        icon = Res.Icon.android,
+        iconDesription = "Android Icon",
         title = "Android Developmemt",
         description = LOREM_IPSUM_SHORT
     ),
     Flutter(
-        image = Res.Icon.flutter,
-        imageDescription = "Flutter Icon",
+        icon = Res.Icon.flutter,
+        iconDesription = "Flutter Icon",
         title = "Flutter Development",
         description = LOREM_IPSUM_SHORT
     ),
     Web(
-        image = Res.Icon.web, imageDescription = "Web Icon", title = "Web Development", description = LOREM_IPSUM_SHORT
+        icon = Res.Icon.web, iconDesription = "Web Icon", title = "Web Development", description = LOREM_IPSUM_SHORT
     ),
     AdobeXD(
-        image = Res.Icon.adobeXD,
-        imageDescription = "Adobe XD Icon",
+        icon = Res.Icon.adobeXD,
+        iconDesription = "Adobe XD Icon",
         title = "UI Designer",
         description = LOREM_IPSUM_SHORT
     ),
     SQL(
-        image = Res.Icon.sql,
-        imageDescription = "SQL Icon",
+        icon = Res.Icon.sql,
+        iconDesription = "SQL Icon",
         title = "Backend Developer",
         description = LOREM_IPSUM_SHORT
     ),
     Cloud(
-        image = Res.Icon.gcp,
-        imageDescription = "Cloud  Icon",
+        icon = Res.Icon.gcp,
+        iconDesription = "Cloud  Icon",
         title = "Cloud Engineer",
         description = LOREM_IPSUM_SHORT
     )

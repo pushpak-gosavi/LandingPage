@@ -49,8 +49,8 @@ fun aboutSection() {
         Column(
             modifier = Modifier
                 .fillMaxWidth(
-                    if (breakpoint >= Breakpoint.MD) 90.percent
-                    else 100.percent
+                    if (breakpoint >= Breakpoint.MD) 100.percent
+                    else 90.percent
                 )
                 .maxWidth(1200.px),
             horizontalAlignment = Alignment.CenterHorizontally
