@@ -21,6 +21,7 @@ object Res {
         const val gcp = "gcp.svg"
         const val sql = "sql.svg"
         const val web = "web.svg"
+        const val link_icon="link_icon.svg"
     }
 
     object Image {
@@ -28,5 +29,9 @@ object Res {
         const val logo = "logo.svg"
         const val pushpak_image = "pushpak_image.png"
         const val about_image = "about_image.jpg"
+        const val portfolio_family_contact = "portfolio_family_contact.png"
+        const val portfolio_ravishing_recipes = "portfolio_ravishing_recipes.png"
+        const val portfolio_bmi_cal = "portfolio_bmi_cal.png"
+        const val portfolio_todo = "portfolio_todo.png"
     }
 }
