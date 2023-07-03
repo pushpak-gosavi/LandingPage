@@ -7,6 +7,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Color
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
+import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.components.style.visited
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
@@ -59,5 +60,16 @@ val PortfolioSectionStyle by ComponentStyle {
         Modifier
             .translateX(tx = 5.percent)
             .transition(CSSTransition(property = "translate", duration = 200.ms))
+    }
+}
+
+val ArrowStyle by ComponentStyle {
+    base {
+        Modifier
+            .color(Theme.Gray.rgb)
+            .transition(CSSTransition(property = "color", duration = 200.ms))
+    }
+    hover{
+        Modifier.color(Theme.Primary.rgb)
     }
 }

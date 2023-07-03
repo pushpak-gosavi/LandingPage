@@ -5,17 +5,25 @@ import com.pushpak_gosavi.pushpak.components.portfolioCard
 import com.pushpak_gosavi.pushpak.components.sectionTitle
 import com.pushpak_gosavi.pushpak.models.Portfolio
 import com.pushpak_gosavi.pushpak.models.Section
+import com.pushpak_gosavi.pushpak.style.ArrowStyle
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
+import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.css.ScrollBehavior
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.components.icons.fa.FaArrowLeft
+import com.varabyte.kobweb.silk.components.icons.fa.FaArrowRight
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import kotlinx.browser.document
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
@@ -49,6 +57,7 @@ fun portfolioContent() {
             modifier = Modifier.fillMaxWidth().margin(bottom = 25.px),
         )
         portfolioCards(breakpoint = breakpoint)
+        portfolioArrows()
     }
 }
 
@@ -56,6 +65,7 @@ fun portfolioContent() {
 fun portfolioCards(breakpoint: Breakpoint) {
     Row(
         modifier = Modifier
+            .id("portfolioContainer")
             .fillMaxWidth()
             .margin(bottom = 25.px)
             .maxWidth(
@@ -73,5 +83,36 @@ fun portfolioCards(breakpoint: Breakpoint) {
                 portfolio = portfolio
             )
         }
+    }
+}
+
+@Composable
+fun portfolioArrows(){
+    Row (
+        modifier = Modifier
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center
+    ){
+        FaArrowLeft(
+            modifier = ArrowStyle.toModifier()
+                .margin(leftRight = 10.px)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    document.getElementById("portfolioContainer")
+                        ?.scrollTo(x = -325.0, y = 0.0)
+                },
+            size = IconSize.LG,
+        )
+        FaArrowRight(
+            modifier = ArrowStyle.toModifier()
+                .margin(leftRight = 10.px)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    document.getElementById("portfolioContainer")
+                        ?.scrollTo(x = 325.0, y=0.0)
+                },
+            size = IconSize.LG,
+        )
+
     }
 }
