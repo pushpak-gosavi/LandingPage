@@ -1,10 +1,7 @@
 package com.pushpak_gosavi.pushpak.pages
 
 import androidx.compose.runtime.*
-import com.pushpak_gosavi.pushpak.pages.sections.aboutSection
-import com.pushpak_gosavi.pushpak.pages.sections.mainSection
-import com.pushpak_gosavi.pushpak.pages.sections.portfolioSection
-import com.pushpak_gosavi.pushpak.pages.sections.serviceSection
+import com.pushpak_gosavi.pushpak.pages.sections.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -25,5 +22,6 @@ fun homePage() {
         aboutSection()
         serviceSection()
         portfolioSection()
+        achievementSection()
     }
 }

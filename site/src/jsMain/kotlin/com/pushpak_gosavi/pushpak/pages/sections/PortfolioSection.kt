@@ -1,10 +1,13 @@
 package com.pushpak_gosavi.pushpak.pages.sections
 
 import androidx.compose.runtime.Composable
+import com.pushpak_gosavi.pushpak.components.achievementCard
 import com.pushpak_gosavi.pushpak.components.portfolioCard
 import com.pushpak_gosavi.pushpak.components.sectionTitle
+import com.pushpak_gosavi.pushpak.models.Achievement
 import com.pushpak_gosavi.pushpak.models.Portfolio
 import com.pushpak_gosavi.pushpak.models.Section
+import com.pushpak_gosavi.pushpak.models.Theme
 import com.pushpak_gosavi.pushpak.style.ArrowStyle
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
 import com.varabyte.kobweb.compose.css.Cursor
@@ -20,6 +23,8 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.icons.fa.FaArrowLeft
 import com.varabyte.kobweb.silk.components.icons.fa.FaArrowRight
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
+import com.varabyte.kobweb.silk.components.layout.SimpleGrid
+import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
@@ -58,6 +63,7 @@ fun portfolioContent() {
         )
         portfolioCards(breakpoint = breakpoint)
         portfolioArrows()
+        //achievementCards()
     }
 }
 
@@ -87,12 +93,12 @@ fun portfolioCards(breakpoint: Breakpoint) {
 }
 
 @Composable
-fun portfolioArrows(){
-    Row (
+fun portfolioArrows() {
+    Row(
         modifier = Modifier
             .fillMaxWidth(),
         horizontalArrangement = Arrangement.Center
-    ){
+    ) {
         FaArrowLeft(
             modifier = ArrowStyle.toModifier()
                 .margin(leftRight = 10.px)
@@ -109,7 +115,7 @@ fun portfolioArrows(){
                 .cursor(Cursor.Pointer)
                 .onClick {
                     document.getElementById("portfolioContainer")
-                        ?.scrollTo(x = 325.0, y=0.0)
+                        ?.scrollTo(x = 325.0, y = 0.0)
                 },
             size = IconSize.LG,
         )

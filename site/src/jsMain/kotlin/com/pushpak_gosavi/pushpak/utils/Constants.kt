@@ -22,6 +22,10 @@ object Res {
         const val sql = "sql.svg"
         const val web = "web.svg"
         const val link_icon="link_icon.svg"
+        const val checkMarkIcon="checkmark_icon.svg"
+        const val happyIcon="happy_icon.svg"
+        const val shieldIcon="shield_icon.svg"
+        const val userIcon="user_icon.svg"
     }
 
     object Image {
