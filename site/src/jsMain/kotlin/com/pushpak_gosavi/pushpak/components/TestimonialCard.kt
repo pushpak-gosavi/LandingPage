@@ -25,7 +25,7 @@ fun testimonialCard(
     breakpoint: Breakpoint
 ) {
     Row(
-        modifier = Modifier.maxWidth(500.px)
+        modifier = modifier.maxWidth(500.px)
     ) {
         Image(
             modifier = Modifier
@@ -68,14 +68,9 @@ fun testimonialCard(
                     ) {
                         Text(testimonial.profession)
                     }
-                    if(breakpoint <= Breakpoint.MD){
-                        ratingBar(modifier = Modifier.margin(top = 10.px))
-                    }
+                        ratingBar(modifier = Modifier.margin(top = 5.px))
                 }
-                    if(breakpoint > Breakpoint.MD) {
-                        Spacer()
-                        ratingBar()
-                    }
+
             }
             P(
                 attrs = Modifier

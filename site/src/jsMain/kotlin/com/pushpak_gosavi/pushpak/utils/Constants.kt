@@ -39,10 +39,10 @@ object Res {
         const val portfolio_bmi_cal = "portfolio_bmi_cal.png"
         const val portfolio_todo = "portfolio_todo.png"
         const val avatar1 = "avatar1.png"
-        const val avatar2 = "avatar1.png"
-        const val avatar3 = "avatar1.png"
-        const val avatar4 = "avatar1.png"
-        const val avatar5 = "avatar1.png"
-        const val avatar6 = "avatar1.png"
+        const val avatar2 = "avatar2.png"
+        const val avatar3 = "avatar3.png"
+        const val avatar4 = "avatar4.png"
+        const val avatar5 = "avatar5.png"
+        const val avatar6 = "avatar6.png"
     }
 }
