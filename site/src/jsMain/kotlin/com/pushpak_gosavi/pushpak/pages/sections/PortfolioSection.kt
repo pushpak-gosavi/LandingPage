@@ -105,7 +105,7 @@ fun portfolioArrows() {
                 .cursor(Cursor.Pointer)
                 .onClick {
                     document.getElementById("portfolioContainer")
-                        ?.scrollTo(x = -325.0, y = 0.0)
+                        ?.scrollBy(x = -325.0, y = 0.0)
                 },
             size = IconSize.LG,
         )
@@ -115,7 +115,7 @@ fun portfolioArrows() {
                 .cursor(Cursor.Pointer)
                 .onClick {
                     document.getElementById("portfolioContainer")
-                        ?.scrollTo(x = 325.0, y = 0.0)
+                        ?.scrollBy(x = 325.0, y = 0.0)
                 },
             size = IconSize.LG,
         )

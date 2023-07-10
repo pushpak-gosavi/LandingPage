@@ -21,11 +21,12 @@ object Res {
         const val gcp = "gcp.svg"
         const val sql = "sql.svg"
         const val web = "web.svg"
-        const val link_icon="link_icon.svg"
-        const val checkMarkIcon="checkmark_icon.svg"
-        const val happyIcon="happy_icon.svg"
-        const val shieldIcon="shield_icon.svg"
-        const val userIcon="user_icon.svg"
+        const val link_icon = "link_icon.svg"
+        const val checkMarkIcon = "checkmark_icon.svg"
+        const val happyIcon = "happy_icon.svg"
+        const val shieldIcon = "shield_icon.svg"
+        const val userIcon = "user_icon.svg"
+        const val starIcon="star_icon.svg"
     }
 
     object Image {
@@ -37,5 +38,11 @@ object Res {
         const val portfolio_ravishing_recipes = "portfolio_ravishing_recipes.png"
         const val portfolio_bmi_cal = "portfolio_bmi_cal.png"
         const val portfolio_todo = "portfolio_todo.png"
+        const val avatar1 = "avatar1.png"
+        const val avatar2 = "avatar1.png"
+        const val avatar3 = "avatar1.png"
+        const val avatar4 = "avatar1.png"
+        const val avatar5 = "avatar1.png"
+        const val avatar6 = "avatar1.png"
     }
 }

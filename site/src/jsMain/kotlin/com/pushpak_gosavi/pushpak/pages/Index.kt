@@ -23,5 +23,6 @@ fun homePage() {
         serviceSection()
         portfolioSection()
         achievementSection()
+        testimonialSection()
     }
 }
