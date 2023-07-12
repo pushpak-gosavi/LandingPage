@@ -24,5 +24,6 @@ fun homePage() {
         portfolioSection()
         achievementSection()
         testimonialSection()
+        experienceSection()
     }
 }
