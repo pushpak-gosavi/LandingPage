@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import com.pushpak_gosavi.pushpak.models.Experience
 import com.pushpak_gosavi.pushpak.models.Theme
 import com.pushpak_gosavi.pushpak.utils.Constants.FONT_FAMILY
+import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -17,10 +18,7 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
-import org.jetbrains.compose.web.css.Color
-import org.jetbrains.compose.web.css.LineStyle
-import org.jetbrains.compose.web.css.percent
-import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
@@ -28,7 +26,8 @@ import org.jetbrains.compose.web.dom.Text
 fun experienceCard(
     active: Boolean = false,
     experience: Experience,
-    breakpoint: Breakpoint
+    breakpoint: Breakpoint,
+    animatedMargin:CSSSizeValue<CSSUnit.px>
 ) {
 
     SimpleGrid(
@@ -47,7 +46,8 @@ fun experienceCard(
         experienceDetails(
             active = active,
             experience = experience,
-            breakpoint = breakpoint
+            breakpoint = breakpoint,
+            animatedMargin = animatedMargin
         )
     }
 }
@@ -85,7 +85,8 @@ fun experienceDescription(
 fun experienceDetails(
     active: Boolean,
     experience: Experience,
-    breakpoint: Breakpoint
+    breakpoint: Breakpoint,
+    animatedMargin: CSSSizeValue<CSSUnit.px>
 ) {
     Row(
         modifier = Modifier.fillMaxWidth()
@@ -104,7 +105,14 @@ fun experienceDetails(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .margin(left = if (breakpoint >= Breakpoint.SM) 0.px else 14.px),
+                .margin(left = if (breakpoint <=Breakpoint.SM)animatedMargin else 0.px)
+                .transition(
+                    CSSTransition(
+                        property = "margin",
+                        duration = 500.ms,
+                        delay = experience.ordinal * 100.ms
+                    )
+                ),
             verticalArrangement = Arrangement.Center
         ) {
             P(
