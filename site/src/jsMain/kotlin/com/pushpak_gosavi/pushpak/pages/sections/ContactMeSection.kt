@@ -1,6 +1,7 @@
 package com.pushpak_gosavi.pushpak.pages.sections
 
 import androidx.compose.runtime.Composable
+import com.pushpak_gosavi.pushpak.components.contactMeForm
 import com.pushpak_gosavi.pushpak.components.sectionTitle
 import com.pushpak_gosavi.pushpak.models.Section
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
@@ -43,8 +44,11 @@ fun contactMeContent(){
     ){
         sectionTitle(
             section = Section.Contact,
-            modifier = Modifier.margin(topBottom = 20.px),
+            modifier = Modifier.margin(bottom = 25.px),
             alignment = Alignment.CenterHorizontally
+        )
+        contactMeForm(
+            breakpoint = breakpoint
         )
     }
 
