@@ -22,11 +22,19 @@ import org.jetbrains.compose.web.dom.*
 fun contactMeForm(
     breakpoint: Breakpoint
 ) {
-    Form {
+    Form(
+        action = "https://formspree.io/f/xleydrzl",
+        attrs = Modifier
+            .attrsModifier {
+                attr("method", "POST")
+            }
+            .toAttrs()
+    ) {
         Label(
             attrs = Modifier
                 .classNames("form-label")
-                .toAttrs()
+                .toAttrs(),
+            forId = "inputName"
         ) {
             Text("Name")
         }
@@ -46,7 +54,8 @@ fun contactMeForm(
                 .backgroundColor(Theme.LighterGray.rgb)
                 .attrsModifier {
                     attr("placeholder", "Full Name")
-                    attr("required" ,"true")
+                    attr("name", "name")
+                    attr("required", "true")
                 }
                 .toAttrs(),
         )
@@ -54,7 +63,8 @@ fun contactMeForm(
         Label(
             attrs = Modifier
                 .classNames("form-label")
-                .toAttrs()
+                .toAttrs(),
+            forId = "inputEmail"
         ) {
             Text("Email")
         }
@@ -75,7 +85,8 @@ fun contactMeForm(
                 .backgroundColor(Theme.LighterGray.rgb)
                 .attrsModifier {
                     attr("placeholder", "Email Address")
-                    attr("required" ,"true")
+                    attr("name", "email")
+                    attr("required", "true")
                 }
                 .toAttrs()
         )
@@ -83,7 +94,8 @@ fun contactMeForm(
         Label(
             attrs = Modifier
                 .classNames("form-label")
-                .toAttrs()
+                .toAttrs(),
+            forId = "inputMessage"
         ) {
             Text("Message")
         }
@@ -105,7 +117,8 @@ fun contactMeForm(
                 .width(if (breakpoint >= Breakpoint.MD) 500.px else 250.px)
                 .attrsModifier {
                     attr("placeholder", "Type Message here")
-                    attr("required" ,"true")
+                    attr("name", "message")
+                    attr("required", "true")
                 }
                 .toAttrs()
         )
