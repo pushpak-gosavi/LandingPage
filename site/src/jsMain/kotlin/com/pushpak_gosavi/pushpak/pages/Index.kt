@@ -26,5 +26,6 @@ fun homePage() {
         testimonialSection()
         experienceSection()
         contactMeSection()
+        footerSection()
     }
 }

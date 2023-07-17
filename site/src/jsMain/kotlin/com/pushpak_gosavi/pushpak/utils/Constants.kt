@@ -5,6 +5,8 @@ import org.jetbrains.compose.web.css.px
 object Constants {
     val SECTION_WIDTH = 1920.px
     val FONT_FAMILY = "Roboto"
+    val FACEBOOK_LINK ="https://www.facebook.com/pushpak.cool.39"
+    val INSTAGRAM_LINK = "https://www.instagram.com/pushpakgosavi/?igshid=NGExMmI2YTkyZg%3D%3D"
     val LINKEDIN_WEBSITE = "https://www.linkedin.com/in/pushpak-gosavi-b81172184"
     val GIT_HUB_WEBSITE = "https://github.com/pushpak-gosavi"
     val LOREM_IPSUM =
