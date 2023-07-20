@@ -37,13 +37,13 @@ import org.jetbrains.compose.web.dom.Text
 import kotlin.math.atan
 
 @Composable
-fun mainSection(){
+fun mainSection(onMenuClicked: () -> Unit){
     Box (
         modifier = Modifier.fillMaxSize().maxSize(SECTION_WIDTH),
         contentAlignment = Alignment.TopCenter
     ) {
         mainBackground()
-        mainContent()
+        mainContent(onMenuClicked = onMenuClicked)
     }
 }
 
@@ -57,7 +57,7 @@ fun mainBackground(){
 }
 
 @Composable
-fun mainContent(){
+fun mainContent(onMenuClicked:() -> Unit){
     val breakpoint = rememberBreakpoint()
     Column(
         modifier = Modifier
@@ -65,7 +65,7 @@ fun mainContent(){
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-        header()
+        header(onMenuClicked = onMenuClicked)
         Column (
             modifier = Modifier
                 .fillMaxSize(),

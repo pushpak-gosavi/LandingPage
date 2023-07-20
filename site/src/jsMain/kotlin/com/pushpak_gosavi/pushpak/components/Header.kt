@@ -1,5 +1,3 @@
-
-
 package com.pushpak_gosavi.pushpak.components
 
 import androidx.compose.runtime.Composable
@@ -28,31 +26,35 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun header() {
+fun header(onMenuClicked: () -> Unit) {
     val breakpoint = rememberBreakpoint()
-    Row (
-        modifier = Modifier.
-        fillMaxWidth(if(breakpoint<=Breakpoint.MD)80.percent else 90.percent).
-        id(Section.Home.id).
-        margin(topBottom = 50.px),
+    Row(
+        modifier = Modifier.fillMaxWidth(if (breakpoint <= Breakpoint.MD) 80.percent else 90.percent)
+            .id(Section.Home.id).margin(topBottom = 50.px),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
-    ){
-        leftSide(breakpoint)
-        if(breakpoint > Breakpoint.MD) {
+    ) {
+        leftSide(breakpoint, onMenuClicked = onMenuClicked)
+        if (breakpoint > Breakpoint.MD) {
             rightSide()
         }
     }
 }
 
 @Composable
-fun leftSide(breakpoint: Breakpoint) {
-    Row (
+fun leftSide(
+    breakpoint: Breakpoint,
+    onMenuClicked: () -> Unit
+) {
+    Row(
         verticalAlignment = Alignment.CenterVertically
-    ){
+    ) {
         if (breakpoint <= Breakpoint.MD) {
             FaBars(
-                modifier = Modifier.margin(right = 15.px),
+                modifier = Modifier.margin(right = 15.px)
+                    .onClick {
+                        onMenuClicked()
+                    },
                 size = IconSize.XL
             )
         }
@@ -65,15 +67,15 @@ fun leftSide(breakpoint: Breakpoint) {
 }
 
 @Composable
-fun rightSide(){
-    Row (
+fun rightSide() {
+    Row(
         modifier = Modifier
             .fillMaxWidth(80.percent)
             .padding(20.px)
             .borderRadius(50.px)
             .backgroundColor(Theme.LighterGray.rgb),
         horizontalArrangement = Arrangement.End
-    ){
+    ) {
         Section.values().take(6).forEach { section ->
             Link(
                 modifier = NavigationItemStyle.toModifier()

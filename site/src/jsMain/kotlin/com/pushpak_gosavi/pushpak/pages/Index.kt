@@ -2,6 +2,7 @@ package com.pushpak_gosavi.pushpak.pages
 
 import androidx.compose.runtime.*
 import com.pushpak_gosavi.pushpak.components.bottomToTopArrow
+import com.pushpak_gosavi.pushpak.components.overFlowMenu
 import com.pushpak_gosavi.pushpak.pages.sections.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -14,6 +15,7 @@ import com.varabyte.kobweb.core.Page
 @Page
 @Composable
 fun homePage() {
+    var menuOpened by remember { mutableStateOf(false) }
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -22,7 +24,9 @@ fun homePage() {
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            mainSection()
+            mainSection(onMenuClicked = {
+                menuOpened = true
+            })
             aboutSection()
             serviceSection()
             portfolioSection()
@@ -34,5 +38,8 @@ fun homePage() {
         }
 
         bottomToTopArrow()
+        if (menuOpened) {
+            overFlowMenu(onMenuClosed = { menuOpened = false })
+        }
     }
 }
