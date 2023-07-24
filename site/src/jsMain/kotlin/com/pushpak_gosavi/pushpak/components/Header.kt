@@ -76,12 +76,12 @@ fun rightSide() {
             .backgroundColor(Theme.LighterGray.rgb),
         horizontalArrangement = Arrangement.End
     ) {
-        Section.values().take(6).forEach { section ->
+        Section.values().take(7).forEach { section ->
             Link(
                 modifier = NavigationItemStyle.toModifier()
-                    .padding(right = 30.px)
+                    .padding(right = 20.px)
                     .fontFamily(FONT_FAMILY)
-                    .fontSize(18.px)
+                    .fontSize(16.px)
                     .fontWeight(FontWeight.Normal)
                     .textDecorationLine(TextDecorationLine.None),
                 path = section.path,

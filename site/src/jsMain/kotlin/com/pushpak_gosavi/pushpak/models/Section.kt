@@ -36,6 +36,12 @@ enum class Section (
         subtitle = "Work Experience",
         path = "#experience"
     ),
+    Certification(
+        id = "certification",
+        title = "Certification",
+        subtitle = "Certification Completed",
+        path = "#certification"
+    ),
     Contact(
         id = "contact",
         title = "Contact me",
@@ -54,10 +60,4 @@ enum class Section (
         subtitle = "Personal Achievements",
         path = "#achievements"
     ),
-    Certification(
-    id = "certification",
-    title = "Certification",
-    subtitle = "Certification Completed",
-    path = "#certification"
-    )
 }
