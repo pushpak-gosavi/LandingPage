@@ -33,6 +33,7 @@ fun homePage() {
             achievementSection()
             testimonialSection()
             experienceSection()
+            certificateSection()
             contactMeSection()
             footerSection()
         }

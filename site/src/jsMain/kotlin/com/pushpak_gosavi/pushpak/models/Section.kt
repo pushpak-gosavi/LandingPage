@@ -53,5 +53,11 @@ enum class Section (
         title = "Achievements",
         subtitle = "Personal Achievements",
         path = "#achievements"
+    ),
+    Certification(
+    id = "certification",
+    title = "Certification",
+    subtitle = "Certification Completed",
+    path = "#certification"
     )
 }

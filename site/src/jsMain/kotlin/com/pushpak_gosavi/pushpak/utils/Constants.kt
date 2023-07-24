@@ -46,5 +46,8 @@ object Res {
         const val avatar4 = "avatar4.png"
         const val avatar5 = "avatar5.png"
         const val avatar6 = "avatar6.png"
+        const val modern_food="modern_food.jpg"
+        const val gcp="gcp.jpg"
+        const val azure="azure.jpg"
     }
 }
