@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
-    alias(libs.plugins.kobwebx.markdown)
+//    alias(libs.plugins.kobwebx.markdown)
 }
 
 group = "com.pushpak_gosavi.pushpak"
@@ -34,7 +34,7 @@ kobweb {
 }
 
 kotlin {
-    configAsKobwebApplication("pushpak", includeServer = true)
+    configAsKobwebApplication("pushpak")
 
     @Suppress("UNUSED_VARIABLE") // Suppress spurious warnings about sourceset variables not being used
     sourceSets {
@@ -50,13 +50,13 @@ kotlin {
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk.core)
                 implementation(libs.kobweb.silk.icons.fa)
-                implementation(libs.kobwebx.markdown)
+               // implementation(libs.kobwebx.markdown)
              }
         }
-        val jvmMain by getting {
-            dependencies {
-                implementation(libs.kobweb.api)
-             }
-        }
+//        val jvmMain by getting {
+//            dependencies {
+//                implementation(libs.kobweb.api)
+//             }
+//        }
     }
 }
