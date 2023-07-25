@@ -8,6 +8,7 @@ import com.pushpak_gosavi.pushpak.models.Skill
 import com.pushpak_gosavi.pushpak.models.Theme
 import com.pushpak_gosavi.pushpak.style.AboutImageStyle
 import com.pushpak_gosavi.pushpak.style.AboutSectionText
+import com.pushpak_gosavi.pushpak.utils.Constants.ABOUT_ME
 import com.pushpak_gosavi.pushpak.utils.Constants.FONT_FAMILY
 import com.pushpak_gosavi.pushpak.utils.Constants.LOREM_IPSUM_SHORT
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
@@ -127,7 +128,7 @@ fun aboutMeInfo() {
                 .toAttrs()
         )
         {
-            Text(LOREM_IPSUM_SHORT)
+            Text(ABOUT_ME)
         }
 
         Skill.values().forEach { skill ->

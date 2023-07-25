@@ -94,7 +94,7 @@ fun overFlowMenu(onMenuClosed: () -> Unit) {
                     desc = "Logo Image"
                 )
             }
-            Section.values().take(6).forEach { section ->
+            Section.values().take(7).forEach { section ->
                 Link(
                     modifier = NavigationItemStyle.toModifier()
                         .margin(bottom = 10.px)

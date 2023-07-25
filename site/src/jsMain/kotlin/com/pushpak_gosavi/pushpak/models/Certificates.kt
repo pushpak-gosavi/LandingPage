@@ -15,8 +15,16 @@ enum class Certificates(
         imagePath = Res.Image.azure,
         title = "Azure Cloud Certificate"
     ),
+    ToDo(
+        imagePath = Res.Image.to_do,
+        title = "TO Do Application"
+    ),
     ModernFood(
         imagePath = Res.Image.modern_food,
         title = "Android Udemy"
+    ),
+    FireBase(
+        imagePath=Res.Image.firebase,
+        title = "Firebase From Udemy"
     )
 }

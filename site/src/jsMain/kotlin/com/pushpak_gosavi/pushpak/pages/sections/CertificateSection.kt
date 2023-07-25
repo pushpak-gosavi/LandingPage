@@ -147,7 +147,7 @@ fun certificateCards(breakpoint: Breakpoint) {
                 certificates = certificate,
                 breakpoint = breakpoint,
                 modifier = Modifier
-                    .margin(right = if (certificate != Certificates.ModernFood) 5.px else 0.px)
+                    .margin(right = if (certificate != Certificates.FireBase) 5.px else 0.px)
             )
         }
     }

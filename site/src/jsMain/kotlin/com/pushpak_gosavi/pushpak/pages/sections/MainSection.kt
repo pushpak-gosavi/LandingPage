@@ -9,6 +9,7 @@ import com.pushpak_gosavi.pushpak.style.MainButtonStyle
 import com.pushpak_gosavi.pushpak.style.MainImageStyle
 import com.pushpak_gosavi.pushpak.utils.Constants.FONT_FAMILY
 import com.pushpak_gosavi.pushpak.utils.Constants.LOREM_IPSUM
+import com.pushpak_gosavi.pushpak.utils.Constants.PUSHPAK_GOSAVI
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
 import com.pushpak_gosavi.pushpak.utils.Res
 import com.varabyte.kobweb.compose.css.*
@@ -141,7 +142,7 @@ fun mainText(breakpoint: Breakpoint){
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
             ){
-                Text(LOREM_IPSUM)
+                Text(PUSHPAK_GOSAVI)
             }
 
             Button (

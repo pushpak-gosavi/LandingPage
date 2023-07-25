@@ -77,7 +77,7 @@ fun footerContent() {
 
 @Composable
 fun footerMenus(row: Boolean = true) {
-    Section.values().take(6).forEach { section ->
+    Section.values().take(7).forEach { section ->
         Link(
             modifier = NavigationItemStyle.toModifier()
                 .padding(
