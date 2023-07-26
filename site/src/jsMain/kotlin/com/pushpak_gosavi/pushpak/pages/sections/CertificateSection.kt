@@ -7,6 +7,7 @@ import com.pushpak_gosavi.pushpak.models.Certificates
 import com.pushpak_gosavi.pushpak.models.Portfolio
 import com.pushpak_gosavi.pushpak.models.Section
 import com.pushpak_gosavi.pushpak.models.Theme
+import com.pushpak_gosavi.pushpak.style.ArrowStyle
 import com.pushpak_gosavi.pushpak.style.CertificateLeftArrowStyle
 import com.pushpak_gosavi.pushpak.style.CertificateRightArrowStyle
 import com.pushpak_gosavi.pushpak.utils.Constants.SECTION_WIDTH
@@ -73,6 +74,7 @@ fun certificationContent() {
 
             Box(
                 modifier = CertificateLeftArrowStyle.toModifier().size(50.px).margin(right = 10.px)
+                    .visibility(if (breakpoint > Breakpoint.SM) Visibility.Visible else Visibility.Hidden)
             ) {
                 Box(
                     modifier = Modifier
@@ -101,6 +103,7 @@ fun certificationContent() {
             certificateCards(breakpoint = breakpoint)
             Box(
                 modifier = CertificateRightArrowStyle.toModifier().margin(left = 10.px).size(50.px)
+                    .visibility(if (breakpoint > Breakpoint.SM) Visibility.Visible else Visibility.Hidden)
             ) {
                 Box(
                     modifier = Modifier
@@ -125,6 +128,8 @@ fun certificationContent() {
                 }
             }
         }
+
+        certificatesArrow(modifier = Modifier.visibility(if (breakpoint > Breakpoint.SM) Visibility.Hidden else Visibility.Visible))
     }
 }
 
@@ -137,7 +142,7 @@ fun certificateCards(breakpoint: Breakpoint) {
             .margin(bottom = 25.px)
             .maxWidth(
                  if (breakpoint > Breakpoint.SM) 610.px
-                else 300.px
+                else 305.px
             )
             .overflow(Overflow.Hidden)
             .scrollBehavior(ScrollBehavior.Smooth),
@@ -150,5 +155,36 @@ fun certificateCards(breakpoint: Breakpoint) {
                     .margin(right = if (certificate != Certificates.FireBase) 5.px else 0.px)
             )
         }
+    }
+}
+
+@Composable
+private fun certificatesArrow(modifier: Modifier) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center
+    ) {
+        FaArrowLeft(
+            modifier = ArrowStyle.toModifier()
+                .margin(leftRight = 10.px)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    document.getElementById("certificateRow")
+                        ?.scrollBy(x = -305.0, y = 0.0)
+                },
+            size = IconSize.LG,
+        )
+        FaArrowRight(
+            modifier = ArrowStyle.toModifier()
+                .margin(leftRight = 10.px)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    document.getElementById("certificateRow")
+                        ?.scrollBy(x = 305.0, y = 0.0)
+                },
+            size = IconSize.LG,
+        )
+
     }
 }

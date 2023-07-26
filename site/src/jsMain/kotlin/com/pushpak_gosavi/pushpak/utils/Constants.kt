@@ -63,6 +63,7 @@ object Res {
         const val modern_food="modern_food.jpg"
         const val gcp="gcp.jpg"
         const val azure="azure.jpg"
+        const val website_certificate= "website_certificate.jpg"
         const val to_do="to_do.jpg"
         const val firebase="fire_base.jpg"
     }

@@ -15,6 +15,10 @@ enum class Certificates(
         imagePath = Res.Image.azure,
         title = "Azure Cloud Certificate"
     ),
+    KobWebUdemy(
+        imagePath = Res.Image.website_certificate,
+        title = "KobWeb Certificate"
+    ),
     ToDo(
         imagePath = Res.Image.to_do,
         title = "TO Do Application"
