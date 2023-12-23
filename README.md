@@ -52,7 +52,7 @@ Kobweb also supports exporting to a static layout which is compatible with stati
 Pages, Netlify, Firebase, any presumably all the others. You can read more about that approach here:
 https://bitspittle.dev/blog/2022/staticdeploy
 
-<img src="https://github.com/pushpak-gosavi/LandingPage/assets/70949133/2ccecf84-f8d3-449a-a0a2-57dbb83a5dd7" />
+<img src = "https://github.com/pushpak-gosavi/LandingPage/assets/70949133/2ccecf84-f8d3-449a-a0a2-57dbb83a5dd7" />
 <img src = "https://github.com/pushpak-gosavi/LandingPage/assets/70949133/087aa714-4be5-44d0-8fe5-d902681c507a"  />
 <img src = "https://github.com/pushpak-gosavi/LandingPage/assets/70949133/d3b14381-dc1c-4584-84c2-5a00ea2ca1bc"  />
 
