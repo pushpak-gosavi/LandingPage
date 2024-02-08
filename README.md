@@ -6,7 +6,7 @@ just creates a blank home page (which prints to the console so you can confirm i
 If you are still learning, consider instantiating the `app` template (or one of the examples) to see actual,         
 working projects.
 
-## Getting Started       
+## Getting Started   
 
 First, run the development server by typing the following command in a terminal under the `site` folder:      
 
