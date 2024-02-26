@@ -66,5 +66,7 @@ object Res {
         const val website_certificate= "website_certificate.jpg"
         const val to_do="to_do.jpg"
         const val firebase="fire_base.jpg"
+        const val generative_ai="generative_ai.png"
+        const val kotlin_fundamental="kotlin.jpg"
     }
 }

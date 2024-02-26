@@ -7,9 +7,17 @@ enum class Certificates(
     val title: String
 ) {
 
+    KotlinFundamental(
+        imagePath = Res.Image.kotlin_fundamental,
+        title = "Kotlin Fundamentals"
+    ),
     GoogleCloud(
         imagePath = Res.Image.gcp,
         title = "Google Cloud Certificate"
+    ),
+    GenerativeAI(
+        imagePath = Res.Image.generative_ai,
+        title = "Generative AI - Google"
     ),
     Azure(
         imagePath = Res.Image.azure,

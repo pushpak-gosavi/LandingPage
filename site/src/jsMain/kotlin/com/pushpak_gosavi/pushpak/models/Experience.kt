@@ -19,7 +19,7 @@ enum class Experience(
         description = NCSI,
         company = "NCSI Technologies Pvt. Ltd.",
         from = "April 2022",
-        to = "NOW",
+        to = "Jan 2024",
     ),
     Second(
         number = "02",
