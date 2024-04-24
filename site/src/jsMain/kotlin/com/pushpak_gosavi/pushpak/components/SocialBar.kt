@@ -6,6 +6,8 @@ import com.pushpak_gosavi.pushpak.utils.Constants.FACEBOOK_LINK
 import com.pushpak_gosavi.pushpak.utils.Constants.GIT_HUB_WEBSITE
 import com.pushpak_gosavi.pushpak.utils.Constants.INSTAGRAM_LINK
 import com.pushpak_gosavi.pushpak.utils.Constants.LINKEDIN_WEBSITE
+import com.pushpak_gosavi.pushpak.utils.Constants.MEDIUM_WEBSITE
+import com.varabyte.kobweb.compose.dom.observers.ResizeObserver
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -69,21 +71,21 @@ private fun socialLinks(row: Boolean = false) {
             size = IconSize.LG,
         )
     }
-    Link(
-        modifier = Modifier.margin(
-            bottom = if (row) 0.px else 40.px,
-            right = if (row) 20.px else 0.px
-        ),
-        path = INSTAGRAM_LINK,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
-    ) {
-        FaInstagram(
-            modifier = SocialLinksStyle
-                .toModifier()
-                .padding(25.px),
-            size = IconSize.LG,
-        )
-    }
+//    Link(
+//        modifier = Modifier.margin(
+//            bottom = if (row) 0.px else 40.px,
+//            right = if (row) 20.px else 0.px
+//        ),
+//        path = INSTAGRAM_LINK,
+//        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+//    ) {
+//        FaInstagram(
+//            modifier = SocialLinksStyle
+//                .toModifier()
+//                .padding(25.px),
+//            size = IconSize.LG,
+//        )
+//    }
     Link(
         modifier = Modifier.margin(
             bottom = if (row) 0.px else 40.px,
@@ -111,6 +113,19 @@ private fun socialLinks(row: Boolean = false) {
                 .toModifier()
                 .padding(25.px),
             size = IconSize.LG,
+        )
+    }
+    Link(modifier = Modifier.margin(
+        bottom = if (row) 0.px else 40.px,
+    ),
+        path = MEDIUM_WEBSITE,
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+    ){
+        FaMedium(
+            modifier = SocialLinksStyle
+                .toModifier()
+                .padding(25.px),
+            size = IconSize.LG
         )
     }
 }
