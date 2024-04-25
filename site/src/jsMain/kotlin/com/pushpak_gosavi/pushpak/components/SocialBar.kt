@@ -5,6 +5,7 @@ import com.pushpak_gosavi.pushpak.style.SocialLinksStyle
 import com.pushpak_gosavi.pushpak.utils.Constants.FACEBOOK_LINK
 import com.pushpak_gosavi.pushpak.utils.Constants.GIT_HUB_WEBSITE
 import com.pushpak_gosavi.pushpak.utils.Constants.INSTAGRAM_LINK
+import com.pushpak_gosavi.pushpak.utils.Constants.LEETCODE_WEBSITE
 import com.pushpak_gosavi.pushpak.utils.Constants.LINKEDIN_WEBSITE
 import com.pushpak_gosavi.pushpak.utils.Constants.MEDIUM_WEBSITE
 import com.varabyte.kobweb.compose.dom.observers.ResizeObserver
@@ -56,21 +57,21 @@ fun socialBar(row: Boolean = false) {
 
 @Composable
 private fun socialLinks(row: Boolean = false) {
-    Link(
-        modifier = Modifier.margin(
-            bottom = if (row) 0.px else 40.px,
-            right = if (row) 20.px else 0.px
-        ),
-        path = FACEBOOK_LINK,
-        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
-    ) {
-        FaFacebook(
-            modifier = SocialLinksStyle
-                .toModifier()
-                .padding(25.px),
-            size = IconSize.LG,
-        )
-    }
+//    Link(
+//        modifier = Modifier.margin(
+//            bottom = if (row) 0.px else 40.px,
+//            right = if (row) 20.px else 0.px
+//        ),
+//        path = FACEBOOK_LINK,
+//        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+//    ) {
+//        FaFacebook(
+//            modifier = SocialLinksStyle
+//                .toModifier()
+//                .padding(25.px),
+//            size = IconSize.LG,
+//        )
+//    }
 //    Link(
 //        modifier = Modifier.margin(
 //            bottom = if (row) 0.px else 40.px,
@@ -91,6 +92,21 @@ private fun socialLinks(row: Boolean = false) {
             bottom = if (row) 0.px else 40.px,
             right = if (row) 20.px else 0.px
         ),
+        path = LEETCODE_WEBSITE,
+        openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+    ){
+        FaCode(
+            modifier = SocialLinksStyle
+                .toModifier()
+                .padding(25.px),
+            size = IconSize.LG
+        )
+    }
+    Link(
+        modifier = Modifier.margin(
+            bottom = if (row) 0.px else 40.px,
+            right = if (row) 20.px else 0.px
+        ),
         path = LINKEDIN_WEBSITE,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {
@@ -104,6 +120,7 @@ private fun socialLinks(row: Boolean = false) {
     Link(
         modifier = Modifier.margin(
             bottom = if (row) 0.px else 40.px,
+            right = if (row) 20.px else 0.px
         ),
         path = GIT_HUB_WEBSITE,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
@@ -115,9 +132,7 @@ private fun socialLinks(row: Boolean = false) {
             size = IconSize.LG,
         )
     }
-    Link(modifier = Modifier.margin(
-        bottom = if (row) 0.px else 40.px,
-    ),
+    Link(
         path = MEDIUM_WEBSITE,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ){
