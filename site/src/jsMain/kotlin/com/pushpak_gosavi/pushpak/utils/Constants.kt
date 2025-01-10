@@ -16,7 +16,7 @@ object Constants {
     val LOREM_IPSUM_SHORT =
         "val LOREM_IPSUM= \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
-    val PUSHPAK_GOSAVI= "I have 4+ years of work experience in Mobile Application Technology. I have worked on more than 10 mobile apps and have developed 4 of my own. They are available on Google Play Store across 172 countries."
+    val PUSHPAK_GOSAVI= "I have 5+ years of work experience in Mobile Application Technology. I have worked on more than 10 mobile apps and have developed 4 of my own. They are available on Google Play Store across 172 countries."
     val ABOUT_ME="I am a quick learner who takes responsibility of projects and has a problem-solving mindset. I am always eager to learn new technologies and apply them in real-world projects."
 
     val ANDROID_SERVICE="I am developing the Android Applications using the Kotlin or Java Language, MVVM Design Pattern, Jetpack Compose for the UI, Firebase for the push notifications, and other third party libraries."
@@ -26,9 +26,17 @@ object Constants {
     val SQL_SERVICE= "I am using the Ktor framework for writing the Web API's. Ktor is a framework to easily build connected applications – web applications, HTTP services, mobile and browser applications. "
     val GOOGLE_SERVICE="Google Cloud Platform, offered by Google, is a suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products, such as Google Search, Gmail, Google Drive, and YouTube."
 
-    val NCSI="Developing mobile applications for various platforms such as Android, cross-platform frameworks like Flutter. Writing clean, efficient, and maintainable code in programming languages such as Java, Kotlin (for Android), Dart (for Flutter). Translating UI/UX designs into functioning mobile app interfaces, ensuring a smooth and visually appealing user experience. Integrating mobile applications with backend services, databases, and APIs to enable data exchange and functionality."
+    val SYNECHRON = "I worked on developing an Android Banking application, focusing on implementing efficient and user-friendly features. For continuous integration and continuous deployment (CI/CD), I utilized JIRA, ensuring smooth project tracking and workflow management. The application followed the Redux architecture pattern for state management, enabling predictable and scalable handling of application states. For the UI/UX design, I employed Android Jetpack Compose, allowing the creation of dynamic, responsive, and modern interface."
+    val NCSI="Developed mobile applications for various platforms such as Android, cross-platform frameworks like Flutter. Writing clean, efficient, and maintainable code in programming languages such as Java, Kotlin (for Android), Dart (for Flutter). Translating UI/UX designs into functioning mobile app interfaces, ensuring a smooth and visually appealing user experience. Integrating mobile applications with backend services, databases, and APIs to enable data exchange and functionality."
     val EVONIX_TECHNOLOGY= "Implementing CI/CD pipelines to automate the build, testing, and deployment process of mobile applications. Optimizing mobile app performance to ensure efficient resource usage and responsive user experience. Using version control systems like Git to manage code changes and collaborate effectively with other team members. Working closely with designers, product managers, and other developers to understand requirements and ensure the successful delivery of mobile applications."
     val CORWIN_MINDS="Integration of web services using Retrofit and developing user friendly applications using Material Design. Creating and maintaining technical documentation for the codebase, APIs, and project-related information.Providing support and troubleshooting assistance to end-users and addressing any issues that arise after the app's deployment."
+
+    val SYNECHRON_WEBSITE = "https://www.synechron.com/en-in"
+    val NCSI_WEBSITE="https://www.ncs.co/en-in"
+    val EVONIX_WEBSITE="https://www.evonix.co/"
+    val CORWIN_MINDS_WEBSITE = "https://www.linkedin.com/company/corwinmindsindia/?originalSubdomain=in"
+
+
 }
 
 object Res {

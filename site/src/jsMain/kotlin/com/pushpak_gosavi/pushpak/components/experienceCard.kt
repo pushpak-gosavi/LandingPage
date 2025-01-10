@@ -3,6 +3,7 @@ package com.pushpak_gosavi.pushpak.components
 import androidx.compose.runtime.Composable
 import com.pushpak_gosavi.pushpak.models.Experience
 import com.pushpak_gosavi.pushpak.models.Theme
+import com.pushpak_gosavi.pushpak.utils.Constants
 import com.pushpak_gosavi.pushpak.utils.Constants.FONT_FAMILY
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -15,8 +16,10 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
+import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
+import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.P
@@ -27,7 +30,7 @@ fun experienceCard(
     active: Boolean = false,
     experience: Experience,
     breakpoint: Breakpoint,
-    animatedMargin:CSSSizeValue<CSSUnit.px>
+    animatedMargin: CSSSizeValue<CSSUnit.px>
 ) {
 
     SimpleGrid(
@@ -105,7 +108,7 @@ fun experienceDetails(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .margin(left = if (breakpoint <=Breakpoint.SM)animatedMargin else 0.px)
+                .margin(left = if (breakpoint <= Breakpoint.SM) animatedMargin else 0.px)
                 .transition(
                     CSSTransition(
                         property = "margin",
@@ -138,17 +141,18 @@ fun experienceDetails(
             ) {
                 Text("${experience.from} - ${experience.to}")
             }
-            P(
-                attrs = Modifier
+
+            Link(
+                modifier = Modifier
                     .fontFamily(FONT_FAMILY)
                     .fontWeight(FontWeight.Normal)
                     .color(Theme.Primary.rgb)
                     .fontSize(14.px)
-                    .margin(topBottom = 0.px)
-                    .toAttrs()
-            ) {
-                Text(experience.company)
-            }
+                    .margin(topBottom = 0.px),
+                text = experience.company,
+                path = experience.companyWebsite,
+                openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
+            )
         }
     }
 }
