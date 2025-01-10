@@ -7,9 +7,13 @@ enum class Certificates(
     val title: String
 ) {
 
-    KotlinFundamental(
-        imagePath = Res.Image.kotlin_fundamental,
-        title = "Kotlin Fundamentals"
+    CiCd_Pipeline(
+        imagePath = Res.Image.ci_cd_certificate,
+        title = "CI CD Certificate"
+    ),
+    JetpackCompose(
+        imagePath = Res.Image.jetpack_compose_certificate,
+        title = "Jetpack Compose Crash Course"
     ),
     GoogleCloud(
         imagePath = Res.Image.gcp,
@@ -18,6 +22,9 @@ enum class Certificates(
     GenerativeAI(
         imagePath = Res.Image.generative_ai,
         title = "Generative AI - Google"
+    ),KotlinFundamental(
+        imagePath = Res.Image.kotlin_fundamental,
+        title = "Kotlin Fundamentals"
     ),
     Azure(
         imagePath = Res.Image.azure,

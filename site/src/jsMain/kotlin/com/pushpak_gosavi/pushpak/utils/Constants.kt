@@ -78,5 +78,7 @@ object Res {
         const val firebase="fire_base.jpg"
         const val generative_ai="generative_ai.png"
         const val kotlin_fundamental="kotlin.jpg"
+        const val ci_cd_certificate="ci_cd_jenkins.png"
+        const val jetpack_compose_certificate="jetpack_compose_crash_course.png"
     }
 }
