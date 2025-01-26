@@ -16,7 +16,7 @@ object Constants {
     val LOREM_IPSUM_SHORT =
         "val LOREM_IPSUM= \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
-    val PUSHPAK_GOSAVI= "I have 5+ years of work experience in Mobile Application Technology. I have worked on more than 10 mobile apps and have developed 4 of my own. They are available on Google Play Store across 172 countries."
+    val PUSHPAK_GOSAVI= "I have 5+ years of work experience in Mobile Application Technology. I have worked on more than 10 mobile apps and have developed 5 of my own. They are available on Google Play Store across 172 countries."
     val ABOUT_ME="I am a quick learner who takes responsibility of projects and has a problem-solving mindset. I am always eager to learn new technologies and apply them in real-world projects."
 
     val ANDROID_SERVICE="I am developing the Android Applications using the Kotlin or Java Language, MVVM Design Pattern, Jetpack Compose for the UI, Firebase for the push notifications, and other third party libraries."
@@ -64,6 +64,7 @@ object Res {
         const val portfolio_ravishing_recipes = "portfolio_ravishing_recipes.png"
         const val portfolio_bmi_cal = "portfolio_bmi_cal.png"
         const val portfolio_todo = "portfolio_todo.png"
+        const val portfolio_clappy_bird = "portfolio_clappy_bird.png"
         const val avatar1 = "avatar1.png"
         const val avatar2 = "avatar2.png"
         const val avatar3 = "avatar3.png"

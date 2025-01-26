@@ -13,6 +13,16 @@ enum class Portfolio(
         title = "Family Contact",
         description = "Family Contact Android Application",
         apkLink = "https://play.google.com/store/apps/details?id=com.contact.mycontact&hl=es_419&gl=US"
+    ),ClappyBird(
+        image = Res.Image.portfolio_clappy_bird,
+        title = "Clappy Bird By Pushpak",
+        description = "Clappy Bird application developed using the KMP (Kotlin Multi Platform) its available in desktop, Web and Android",
+        apkLink = "https://play.google.com/store/apps/details?id=pushpak.game.clappybee&pcampaignid=web_share"
+    ),TODO(
+        image = Res.Image.portfolio_todo,
+        title = "To DO",
+        description = "To Do List Android Application",
+        apkLink = "https://play.google.com/store/apps/details?id=com.jetpack.to_docompose&hl=es_419&gl=US"
     ),
     RavishingRecipes(
         image = Res.Image.portfolio_ravishing_recipes,
@@ -25,11 +35,5 @@ enum class Portfolio(
         title = "BMI",
         description = "Body Mass Index Calculator Flutter Application",
         apkLink = "https://play.google.com/store/apps/details?id=com.bmi.bmicalulator&hl=es_419&gl=US"
-    ),
-    TODO(
-        image = Res.Image.portfolio_todo,
-        title = "To DO",
-        description = "To Do List Android Application",
-        apkLink = "https://play.google.com/store/apps/details?id=com.jetpack.to_docompose&hl=es_419&gl=US"
     )
 }
