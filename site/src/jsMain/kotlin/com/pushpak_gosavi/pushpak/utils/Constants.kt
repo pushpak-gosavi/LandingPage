@@ -65,6 +65,7 @@ object Res {
         const val portfolio_bmi_cal = "portfolio_bmi_cal.png"
         const val portfolio_todo = "portfolio_todo.png"
         const val portfolio_clappy_bird = "portfolio_clappy_bird.png"
+        const val portfolio_clappy_bird_web="web_app.png"
         const val avatar1 = "avatar1.png"
         const val avatar2 = "avatar2.png"
         const val avatar3 = "avatar3.png"
@@ -81,5 +82,6 @@ object Res {
         const val kotlin_fundamental="kotlin.jpg"
         const val ci_cd_certificate="ci_cd_jenkins.png"
         const val jetpack_compose_certificate="jetpack_compose_crash_course.png"
+        const val kmp_game_certificate="kmp_game_cource.png"
     }
 }

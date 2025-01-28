@@ -11,29 +11,35 @@ enum class Portfolio(
     FamilyContact(
         image = Res.Image.portfolio_family_contact,
         title = "Family Contact",
-        description = "Family Contact Android Application",
+        description = "Family Contact Android Application developed using Kotlin language. 5K plus downloads on Google Play Store",
         apkLink = "https://play.google.com/store/apps/details?id=com.contact.mycontact&hl=es_419&gl=US"
     ),ClappyBird(
         image = Res.Image.portfolio_clappy_bird,
         title = "Clappy Bird By Pushpak",
-        description = "Clappy Bird application developed using the KMP (Kotlin Multi Platform) its available in desktop, Web and Android",
+        description = "Clappy Bird application developed using the KMP (Kotlin Multi Platform) its available in desktop, Web and Android.",
         apkLink = "https://play.google.com/store/apps/details?id=pushpak.game.clappybee&pcampaignid=web_share"
     ),TODO(
         image = Res.Image.portfolio_todo,
         title = "To DO",
-        description = "To Do List Android Application",
+        description = "To Do List Android Application Developed using Jetpack Compose.",
         apkLink = "https://play.google.com/store/apps/details?id=com.jetpack.to_docompose&hl=es_419&gl=US"
     ),
     RavishingRecipes(
         image = Res.Image.portfolio_ravishing_recipes,
         title = "Ravishing Recipes",
-        description = "Ravishing Recipes Android Application",
+        description = "Ravishing Recipes Android Application developed using Jetpack libraries and MVVM architecture.",
         apkLink = "https://play.google.com/store/apps/details?id=com.foody.foodyapplication&hl=es_419&gl=US"
     ),
     BMI(
         image = Res.Image.portfolio_bmi_cal,
         title = "BMI",
-        description = "Body Mass Index Calculator Flutter Application",
+        description = "Body Mass Index Calculator Application developed using Flutter technology.",
         apkLink = "https://play.google.com/store/apps/details?id=com.bmi.bmicalulator&hl=es_419&gl=US"
+    ),
+    ClappyBeeWeb(
+        image = Res.Image.portfolio_clappy_bird_web,
+        title = "Clappy Bee Web Application",
+        description = "Clappy Bee Web Application developed using KMP (Kotlin Multi platform)",
+        apkLink = "https://clappy-bee-by-pushpak.onrender.com/"
     )
 }

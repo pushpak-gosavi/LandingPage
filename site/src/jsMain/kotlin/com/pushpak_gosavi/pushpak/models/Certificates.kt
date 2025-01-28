@@ -15,6 +15,10 @@ enum class Certificates(
         imagePath = Res.Image.jetpack_compose_certificate,
         title = "Jetpack Compose Crash Course"
     ),
+    KMP_Certificate(
+        imagePath = Res.Image.kmp_game_certificate,
+        title = "Full Stack Game development using Kotlin and Compose Multiplatform"
+    ),
     GoogleCloud(
         imagePath = Res.Image.gcp,
         title = "Google Cloud Certificate"
