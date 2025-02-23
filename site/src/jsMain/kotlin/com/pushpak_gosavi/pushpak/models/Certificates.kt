@@ -6,7 +6,10 @@ enum class Certificates(
     val imagePath: String,
     val title: String
 ) {
-
+    SIX_SKILL(
+        imagePath = Res.Image.six_skill_certificate,
+        title = "The Six Skills of Proactive Professionals"
+    ),
     CiCd_Pipeline(
         imagePath = Res.Image.ci_cd_certificate,
         title = "CI CD Certificate"
@@ -26,7 +29,8 @@ enum class Certificates(
     GenerativeAI(
         imagePath = Res.Image.generative_ai,
         title = "Generative AI - Google"
-    ),KotlinFundamental(
+    ),
+    KotlinFundamental(
         imagePath = Res.Image.kotlin_fundamental,
         title = "Kotlin Fundamentals"
     ),
@@ -47,7 +51,7 @@ enum class Certificates(
         title = "Android Udemy"
     ),
     FireBase(
-        imagePath=Res.Image.firebase,
+        imagePath = Res.Image.firebase,
         title = "Firebase From Udemy"
     )
 }

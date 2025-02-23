@@ -26,6 +26,6 @@ val percentage: CSSSizeValue<CSSUnit.percent>
     ),
     Delivery(
         title = "On-Time Delivery",
-        percentage = 75.percent
+        percentage = 80.percent
     )
 }

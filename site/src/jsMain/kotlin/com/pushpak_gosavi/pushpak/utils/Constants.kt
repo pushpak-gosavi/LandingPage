@@ -83,5 +83,6 @@ object Res {
         const val ci_cd_certificate="ci_cd_jenkins.png"
         const val jetpack_compose_certificate="jetpack_compose_crash_course.png"
         const val kmp_game_certificate="kmp_game_cource.png"
+        const val six_skill_certificate="six_skill_certificate.png"
     }
 }
